@@ -5,5 +5,5 @@ from selene.support.shared import browser
 @pytest.fixture(scope="session")
 def preparations():
     browser.config.hold_browser_open = True
-    browser.config.window_width = 1024
-    browser.config.window_height = 900
+    browser.config.window_width = 1224
+    browser.config.window_height = 1000
