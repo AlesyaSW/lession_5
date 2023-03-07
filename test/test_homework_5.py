@@ -6,6 +6,12 @@ FILE = 'test.png'
 
 def test_open(preparations):
     browser.open('https://demoqa.com/automation-practice-form')
+
+    browser.execute_script('document.querySelector("footer").remove()')
+    browser.execute_script('document.querySelector("#fixedban").remove()')
+    browser.execute_script('document.querySelector("#RightSide_Advertisement").remove()')
+
+
     browser.should(have.title_containing('DEMOQA'))
     browser.element("[id=firstName]").should(be.blank).type("Alesya")
     browser.element("[id=lastName]").should(be.blank).type("Family")
